@@ -1,17 +1,14 @@
 Description: Test demoing VIVIDUS capabilities for Web Applications
 
 
-Scenario: Verify VIVIDUS accessibility For Messages chat
+Scenario: Verify VIVIDUS accessibility For Sign in page
 
 
 Given I am on page with URL `https://tester.test.io/`
 When I enter `xxxxx` in field located by `By.xpath(//input[@id='user_email'])`
 And I enter `xxxxx` in field located by `By.xpath(//input[@id='user_password'])`
 And I click on element located by `By.xpath(//input[@name='commit'])`
-And I click on element located by `By.xpath(//img[@title='test IO'])`
-Then the page has the relative URL 'https://tester.test.io/'
-When I click on element located by `By.cssSelector(div[aria-label='Open Intercom Messenger'])`
-And I change context to element located by `By.xpath(//iframe[@name='intercom-messenger-frame'])`
+And I change context to element located by `By.cssSelector(.testio-navbar)`
 Then I test accessibility:
 |standard|level |elementsToIgnore|elementsToCheck|violationsToIgnore|
 |WCAG2AAA|NOTICE||||

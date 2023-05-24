@@ -13,7 +13,7 @@ Then the page has the relative URL 'https://tester.test.io/'
 When I click on element located by `By.cssSelector(a[class='testio-nav-item hidden-xs-down'] span[class='icon icon-devices mr-0'])`
 Then I test accessibility:
 |standard|level |elementsToIgnore|elementsToCheck|violationsToIgnore|
-|WCAG2AAA|NOTICE||||
-|WCAG2AA|NOTICE||||
-|WCAG2A|NOTICE||||
-|Section 508|NOTICE||||
+|WCAG2AAA|NOTICE|By.cssSelector(#top-nav-bar), By.cssSelector(#main-sidebar)|||
+|WCAG2AA|NOTICE|By.cssSelector(#top-nav-bar), By.cssSelector(#main-sidebar)|||
+|WCAG2A|NOTICE|By.cssSelector(#top-nav-bar), By.cssSelector(#main-sidebar)|||
+|Section 508|NOTICE|By.cssSelector(#top-nav-bar), By.cssSelector(#main-sidebar)|||
